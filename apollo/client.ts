@@ -8,6 +8,7 @@ import { getJwtToken } from '../libs/auth';
 import { TokenRefreshLink } from 'apollo-link-token-refresh';
 let apolloClient: ApolloClient<NormalizedCacheObject>;
 
+//getHeaders() — JWT tokenni requestga qo‘shadi
 function getHeaders() {
 	const headers = {} as HeadersInit;
 	const token = getJwtToken();
@@ -16,6 +17,7 @@ function getHeaders() {
 	return headers;
 }
 
+//access token eskirganda yangilash uchun
 const tokenRefreshLink = new TokenRefreshLink({
 	accessTokenField: 'accessToken',
 	isTokenValidOrUndefined: () => {
@@ -41,6 +43,7 @@ function createIsomorphicLink() {
 		});
 
 		// @ts-ignore
+		//Query/Mutation + file upload uchun HTTP
 		const link = new createUploadLink({
 			uri: process.env.REACT_APP_API_GRAPHQL_URL,
 		});
