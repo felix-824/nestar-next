@@ -181,7 +181,9 @@ const {
 							</div>
 						) : (
 							agents.map((agent: Member) => {
-								return <AgentCard agent={agent} key={agent._id} />;
+								return <AgentCard agent={agent}
+								likeMemberHandler={likeMemberHandler}
+								key={agent._id} />;
 							})
 						)}
 					</Stack>
