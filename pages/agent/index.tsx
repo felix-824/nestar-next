@@ -182,7 +182,7 @@ const {
 						) : (
 							agents.map((agent: Member) => {
 								return <AgentCard agent={agent}
-								likeMemberHandler={likeMemberHandler}
+								likeMemberHandler={likeMemberHandler} 
 								key={agent._id} />;
 							})
 						)}
