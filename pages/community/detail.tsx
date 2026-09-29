@@ -69,7 +69,7 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 	const [boardArticle, setBoardArticle] = useState<BoardArticle>();
 
 	/** APOLLO REQUESTS **/
-	const [likeTargetBoardArticle] = useMutation(LIKE_TARGET_BOARD_ARTICLE);
+const [likeTargetBoardArticle] = useMutation(LIKE_TARGET_BOARD_ARTICLE);
 const [createComment] = useMutation(CREATE_COMMENT);
 const [updateComment] = useMutation(UPDATE_COMMENT);
 

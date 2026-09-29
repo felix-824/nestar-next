@@ -47,7 +47,7 @@ const AgentDetail: NextPage = ({ initialInput, initialComment, ...props }: any) 
 	});
 
 	/** APOLLO REQUESTS **/
-	const [createComment] = useMutation(CREATE_COMMENT);
+const [createComment] = useMutation(CREATE_COMMENT);
 const [likeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
 
 const {
